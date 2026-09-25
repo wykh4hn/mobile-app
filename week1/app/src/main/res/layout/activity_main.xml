@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
@@ -17,6 +19,31 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize" />
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#CC7272"
+            android:backgroundTint="#DE6A92"
+            android:backgroundTintMode="add"
+            android:text="khanh"
+            android:textColor="#4B1616"
+            android:textColorLink="#BF8686" />
+
+        <EditText
+            android:id="@+id/nameKhanh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F48E8E"
+            android:ems="8"
+            android:fontFamily="monospace"
+            android:foregroundTint="#C55353"
+            android:inputType="text"
+            android:text="Nguyen Quy Khanh"
+            android:textColor="#25ABBA"
+            android:textColorHighlight="#9B3131" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -31,4 +58,9 @@
         android:layout_marginBottom="16dp"
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

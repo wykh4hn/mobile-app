@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">week-4</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">Login</string>
+    <string name="exit_button">Exit</string>
+</resources>

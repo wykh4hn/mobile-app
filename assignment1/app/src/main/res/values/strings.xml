@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">assignment-1</string>
+    <string name="app_name">Nguyen Quy Khanh</string>
+    <string name="title">Nguyen Quy Khanh</string>
+
+    <string name="zone_none">Not started</string>
+    <string name="zone_basic">Basic</string>
+    <string name="zone_intermediate">Intermediate</string>
+    <string name="zone_advanced">Advanced</string>
+
+    <string name="btn_perform">Perform</string>
+    <string name="btn_deduction">Deduction</string>
+    <string name="btn_reset">Reset</string>
+
+    <string name="msg_start">Press Perform to begin</string>
+    <string name="msg_deduction">Deduction taken. Routine stopped</string>
+    <string name="msg_complete">Routine complete!</string>
+    <string name="label_element">Element</string>
 </resources>

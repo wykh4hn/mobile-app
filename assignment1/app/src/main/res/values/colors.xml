@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!--main background-->
+    <color name="bg_main">#FDF3F4</color>
+    <!--frame~~-->
+    <color name="surface_card">#FFFFFF</color>
+    <!--border-->
+    <color name="border_soft">#F2DADF</color>
+    <!--main font: header,...-->
+    <color name="text_primary">#3D2B30</color>
+    <!--element font, notification,...-->
+    <color name="text_secondary">#8A6B73</color>
+    <color name="text_disabled">#BFA8AE</color>
+    <!--perform button-->
+    <color name="btn_primary">#B9546E</color>
+    <!--perform button font color-->
+    <color name="btn_primary_text">#FFFFFF</color>
+    <!--deduction and reset button color-->
+    <color name="btn_secondary">#F7E2E7</color>
+    <!--deductiona nd reset font color-->
+    <color name="btn_secondary_text">#8E3A52</color>
+
+    <!--basic level-->
+    <color name="zone_basic">#1565C0</color>
+    <!--interminate level-->
+    <color name="zone_intermediate">#F7E2E7</color>
+    <!--advanced level-->
+    <color name="zone_advanced">#C2410C</color>
 </resources>

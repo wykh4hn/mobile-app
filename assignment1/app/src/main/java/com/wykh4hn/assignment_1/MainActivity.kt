@@ -8,6 +8,8 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.os.LocaleListCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
@@ -16,6 +18,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var btnPerform: Button
     lateinit var btnDeduction: Button
     lateinit var btnReset: Button
+    lateinit var btnLang: Button
     lateinit var txtScore: TextView
     lateinit var txtZone: TextView
     lateinit var txtElement: TextView
@@ -39,6 +42,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btnPerform = findViewById(R.id.btnPerform)
         btnDeduction = findViewById(R.id.btnDeduction)
         btnReset = findViewById(R.id.btnReset)
+        btnLang = findViewById(R.id.btnLang)
         txtScore = findViewById(R.id.txtScore)
         txtZone = findViewById(R.id.txtZone)
         txtElement = findViewById(R.id.txtElement)
@@ -48,9 +52,24 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btnPerform.setOnClickListener(this)
         btnDeduction.setOnClickListener(this)
         btnReset.setOnClickListener(this)
+        btnLang.setOnClickListener(this)
 
         Log.d("Checking", "Run onCreate")
+        // Neu man hinh vua bi huy va tao lai thi lay lai 3 bien
+        if (savedInstanceState != null) {
+            score = savedInstanceState.getInt("SCORE")
+            element = savedInstanceState.getInt("ELEMENT")
+            hasDeduction = savedInstanceState.getBoolean("HAS_DEDUCTION")
+            Log.d("Checking", "Restored state, score=" + score)
+        }
         updateUI()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt("SCORE", score)
+        outState.putInt("ELEMENT", element)
+        outState.putBoolean("HAS_DEDUCTION", hasDeduction)
     }
 
     override fun onClick(v: View?) {
@@ -73,8 +92,19 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 hasDeduction = false
                 Log.d("Checking", "Reset clicked")
             }
+            R.id.btnLang -> {
+                toggleLanguage()
+                return
+            }
         }
         updateUI()
+    }
+
+    private fun toggleLanguage() {
+        val currentLocales = AppCompatDelegate.getApplicationLocales()
+        val currentLang = if (!currentLocales.isEmpty) currentLocales[0]?.language else ""
+        val newLang = if (currentLang == "vi") "en" else "vi"
+        AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(newLang))
     }
 
     // Tra ve so diem cua element thu i theo nhom do kho
@@ -124,5 +154,35 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         // Lam mo nut dang bi khoa de nguoi dung nhin la biet
         if (btnPerform.isEnabled) btnPerform.alpha = 1f else btnPerform.alpha = 0.4f
         if (btnDeduction.isEnabled) btnDeduction.alpha = 1f else btnDeduction.alpha = 0.4f
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d("Checking", "Run onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("Checking", "Run onResume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("Checking", "Run onPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("Checking", "Run onStop")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.d("Checking", "Run onRestart")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("Checking", "Run onDestroy")
     }
 }

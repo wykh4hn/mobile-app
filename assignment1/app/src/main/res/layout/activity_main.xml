@@ -27,13 +27,27 @@
                 android:contentDescription="@string/desc_logo" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:layout_marginStart="10dp"
                 android:text="@string/title"
                 android:textColor="@color/text_primary"
                 android:textSize="22sp"
                 android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnLang"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="0dp"
+                android:text="@string/btn_lang"
+                android:textColor="@color/btn_secondary_text"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:strokeColor="@color/border_soft" />
         </LinearLayout>
 
         <TextView

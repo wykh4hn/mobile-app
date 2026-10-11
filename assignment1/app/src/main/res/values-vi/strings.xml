@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Khanh\'s App</string>
+    <string name="title">GymApp</string>
+    <string name="subtitle">Tập thể dục nhé</string>
+
+    <string name="label_score">ĐIỂM HIỆN TẠI</string>
+    <string name="label_element">Động tác</string>
+    <string name="element_label">Động tác %1$d trên 10</string>
+
+    <string name="zone_none">Chưa bắt đầu</string>
+    <string name="zone_basic">Nhóm cơ bản · 1 điểm mỗi động tác</string>
+    <string name="zone_intermediate">Nhóm trung bình · 2 điểm mỗi động tác</string>
+    <string name="zone_advanced">Nhóm nâng cao · 3 điểm mỗi động tác</string>
+
+    <string name="btn_perform">Thực hiện động tác</string>
+    <string name="btn_deduction">Trừ điểm</string>
+    <string name="btn_reset">Làm lại</string>
+
+    <string name="msg_start">Bấm Thực hiện để bắt đầu bài thi</string>
+    <string name="msg_next">Tiếp theo: động tác %1$d, được %2$d điểm</string>
+    <string name="msg_deduction">Đã bị trừ điểm. Bài thi dừng lại</string>
+    <string name="msg_complete">Hoàn thành bài thi. Điểm cuối: %1$d</string>
+
+    <string name="desc_logo">Biểu tượng ứng dụng</string>
+    <string name="btn_lang">EN</string>
+</resources>

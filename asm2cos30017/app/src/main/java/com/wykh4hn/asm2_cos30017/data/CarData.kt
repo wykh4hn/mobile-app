@@ -1,7 +1,7 @@
-package com.wykh4hn.assigment_2.data
+package com.wykh4hn.asm2_cos30017.data
 
-import com.wykh4hn.assigment_2.R
-import com.wykh4hn.assigment_2.model.Car
+import com.wykh4hn.asm2_cos30017.R
+import com.wykh4hn.asm2_cos30017.model.Car
 
 /**
  * The five cars the company rents out. They are created in memory when the app

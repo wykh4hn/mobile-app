@@ -22,4 +22,7 @@
 
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="segment_bg">#FBE3EC</color>
+    <color name="segment_text">#7A2848</color>
 </resources>

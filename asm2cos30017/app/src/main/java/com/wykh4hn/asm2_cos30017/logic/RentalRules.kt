@@ -1,8 +1,8 @@
-package com.wykh4hn.assigment_2.logic
+package com.wykh4hn.asm2_cos30017.logic
 
-import com.wykh4hn.assigment_2.model.Car
-import com.wykh4hn.assigment_2.model.IdType
-import com.wykh4hn.assigment_2.model.SortOption
+import com.wykh4hn.asm2_cos30017.model.Car
+import com.wykh4hn.asm2_cos30017.model.IdType
+import com.wykh4hn.asm2_cos30017.model.SortOption
 
 /** Result of checking a rental's total cost against the credit rules. */
 enum class CreditCheck { OK, OVER_RENTAL_LIMIT, INSUFFICIENT_BALANCE }

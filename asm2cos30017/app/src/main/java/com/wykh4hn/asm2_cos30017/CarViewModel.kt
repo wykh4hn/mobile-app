@@ -1,12 +1,12 @@
-package com.wykh4hn.assigment_2
+package com.wykh4hn.asm2_cos30017
 
 import androidx.lifecycle.ViewModel
-import com.wykh4hn.assigment_2.data.CarData
-import com.wykh4hn.assigment_2.logic.CreditCheck
-import com.wykh4hn.assigment_2.logic.RentalRules
-import com.wykh4hn.assigment_2.model.Booking
-import com.wykh4hn.assigment_2.model.Car
-import com.wykh4hn.assigment_2.model.SortOption
+import com.wykh4hn.asm2_cos30017.data.CarData
+import com.wykh4hn.asm2_cos30017.logic.CreditCheck
+import com.wykh4hn.asm2_cos30017.logic.RentalRules
+import com.wykh4hn.asm2_cos30017.model.Booking
+import com.wykh4hn.asm2_cos30017.model.Car
+import com.wykh4hn.asm2_cos30017.model.SortOption
 
 /**
  * Holds every piece of app data in memory (Week 4: ViewModel to save state).

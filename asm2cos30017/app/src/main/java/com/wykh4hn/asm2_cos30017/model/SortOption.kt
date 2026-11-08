@@ -1,4 +1,4 @@
-package com.wykh4hn.assigment_2.model
+package com.wykh4hn.asm2_cos30017.model
 
 /**
  * Choices in the sort menu. The order here must match R.array.sort_options,

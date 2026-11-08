@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
-    id("kotlin-parcelize")
 }
+
 
 android {
     namespace = "com.wykh4hn.asm2_cos30017"

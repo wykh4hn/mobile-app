@@ -17,4 +17,7 @@
     <color name="accent">#FF8AB8</color>
     <color name="error">#FFB4AB</color>
     <color name="dot_off">#4B3840</color>
+
+    <color name="segment_bg">#3B2931</color>
+    <color name="segment_text">#F7C6D9</color>
 </resources>

@@ -1,3 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">asm2-cos30017</string>
+    <string name="app_name">KHANHisDRIVING</string>
+
+    <!--Shared-->
+    <string name="brand">KHANHisDRIVING</string>
+    <string name="balance_credits">%1$d credits</string>
+    <string name="cd_balance">Credit balance: %1$d credits</string>
+    <string name="cd_dark_mode">Dark mode</string>
+    <string name="cd_car_photo">Photo of %1$s</string>
+    <string name="cd_rating">Rated %1$.1f out of 5</string>
+    <string name="rating_value">%1$.1f</string>
+    <string name="km_value">%1$,d km</string>
+
+    <!--Home screen-->
+    <string name="home_title">Find your car</string>
+    <string name="search_hint">Name or model</string>
+    <string name="cd_sort">Sort cars</string>
+    <!-- Order must match the SortOption enum -->
+    <string-array name="sort_options">
+        <item>Sort: default</item>
+        <item>Top rated</item>
+        <item>Newest first</item>
+        <item>Cheapest first</item>
+    </string-array>
+
+    <string name="credits_per_day">credits/day</string>
+    <string name="rent">Rent</string>
+    <string name="cd_add_favourite">Add %1$s to favorites</string>
+    <string name="cd_remove_favourite">Remove %1$s from favorites</string>
+    <string name="previous">Prev</string>
+    <string name="next">Next</string>
+    <string name="counter">swipe to see more · %1$d/%2$d</string>
+    <string name="empty_search">No cars match “%1$s”. Try another name or model.</string>
+    <string name="empty_all_rented">All cars are rented right now. Cancel a booking below to make one available again.</string>
+
+    <string name="favourites">Favorites</string>
+    <string name="favourites_empty">Tap the heart to save your favorite car here</string>
+    <string name="status_rented">Rented</string>
+    <string name="price_per_day_short">%1$d credits/day</string>
+
+    <string name="my_booking">My booking</string>
+    <string name="bookings_empty">No active bookings</string>
+    <string name="booking_summary">%1$s · %2$d credits</string>
+    <string name="booking_dates">%1$s → %2$s</string>
+    <string name="booking_renter">Renter: %1$s</string>
+    <string name="email_receipt">Email receipt</string>
+    <string name="cancel_booking">Cancel booking</string>
+    <string name="cd_email_booking">Email receipt for %1$s</string>
+    <string name="cd_cancel_booking">Cancel booking for %1$s</string>
+
+    <string name="toast_booked">%1$s booked · %2$d credits</string>
+    <string name="toast_not_booked">Booking cancelled. No credits were used.</string>
+    <string name="toast_booking_cancelled">%1$s booking cancelled · %2$d credits refunded</string>
+    <string name="toast_favourite_rented">%1$s is rented right now</string>
+    <string name="toast_no_email_app">No email app found on this device</string>
+
+    <string name="dialog_cancel_title">Cancel this booking?</string>
+    <string name="dialog_cancel_message">%1$s will be available again and %2$d credits will go back to your balance.</string>
+    <string name="dialog_keep">Keep booking</string>
+    <string name="dialog_cancel_confirm">Cancel booking</string>
+
+    <string name="email_subject">Your KHANHisDRIVING booking: %1$s</string>
+    <string name="email_body">Hi %1$s,\n\nYour booking is confirmed.\n\nCar: %2$s\nPickup: %3$s\nReturn: %4$s\nLength: %5$s\nTotal: %6$d credits\n\nThank you,\nKHANHisDRIVING</string>
+
+    <!--Booking screen-->
+    <string name="back">Back</string>
+    <string name="car_meta">%1$d · %2$d cr/day</string>
+    <string name="car_details">%1$.1f · %2$,d km</string>
+
+    <string name="section_renter">1 · Renter details</string>
+    <string name="label_full_name">Full name</string>
+    <string name="hint_full_name">Nguyen Van A</string>
+    <string name="label_phone">Phone</string>
+    <string name="hint_phone">0901234567</string>
+    <string name="label_email">Email (optional)</string>
+    <string name="hint_email">you@mail.com</string>
+    <string name="label_address">Address (optional)</string>
+    <string name="hint_address">Street, ward, district, city</string>
+
+    <string name="section_id">2 · Identification</string>
+    <string name="citizen_id">Citizen ID</string>
+    <string name="passport">Passport</string>
+    <string name="label_citizen_id">Citizen ID number</string>
+    <string name="hint_citizen_id">12 digits</string>
+    <string name="label_passport_number">Passport number</string>
+    <string name="hint_passport">e.g. C1234567</string>
+    <string name="label_licence">Driver licence number</string>
+    <string name="hint_licence">12 digits</string>
+
+    <string name="section_period">3 · Rental period</string>
+    <string name="label_pickup">Pickup (today)</string>
+    <string name="label_return">Return</string>
+    <string name="label_days">Number of days</string>
+    <string name="cd_days_slider">Number of rental days, from 1 to 7</string>
+    <string name="summary_cost_line">%1$d cr × %2$s</string>
+    <string name="label_balance_after">Balance after</string>
+    <string name="label_total">Total</string>
+    <string name="credits_short">%1$d cr</string>
+    <string name="credits_long">%1$d credits</string>
+
+    <string name="terms">I confirm the details are correct and accept the rental terms.</string>
+    <string name="cancel">Cancel</string>
+    <string name="save_booking">Save booking</string>
+
+    <plurals name="days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="form_errors">
+        <item quantity="one">%d item above needs fixing before you can save.</item>
+        <item quantity="other">%d items above need fixing before you can save.</item>
+    </plurals>
+
+    <!-- Error messages: say what is wrong AND how to fix it -->
+    <string name="error_name_required">Enter the renter\'s full name</string>
+    <string name="error_name_invalid">Use letters only, at least 2 characters</string>
+    <string name="error_phone_required">Enter a phone number</string>
+    <string name="error_phone_invalid">Use 10 digits starting with 0</string>
+    <string name="error_email_invalid">Enter a valid email, e.g. you@mail.com</string>
+    <string name="error_citizen_required">Enter the citizen ID number</string>
+    <string name="error_citizen_invalid">A citizen ID has exactly 12 digits</string>
+    <string name="error_passport_required">Enter the passport number</string>
+    <string name="error_passport_invalid">Use 6 to 9 letters or digits</string>
+    <string name="error_licence_required">Enter the driver licence number</string>
+    <string name="error_licence_invalid">A driver licence number has exactly 12 digits</string>
+    <string name="error_over_limit">One rental can\'t cost more than %1$d credits. Choose fewer days.</string>
+    <string name="error_insufficient">Not enough credits: this rental needs %1$d, you have %2$d.</string>
+    <string name="error_terms">Please tick the box to confirm.</string>
 </resources>

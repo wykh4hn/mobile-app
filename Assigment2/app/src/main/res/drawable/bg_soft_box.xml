@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Soft pink rounded box: car header on the booking screen, date boxes, ID switch -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/bg_soft" />
+    <corners android:radius="16dp" />
+</shape>

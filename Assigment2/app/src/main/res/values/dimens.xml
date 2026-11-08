@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_padding">20dp</dimen>
+    <dimen name="dot_size">8dp</dimen>
+    <dimen name="dot_margin">4dp</dimen>
+    <!-- Android accessibility guideline: touch targets of at least 48dp -->
+    <dimen name="touch_target">48dp</dimen>
+</resources>

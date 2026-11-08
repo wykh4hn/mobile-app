@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- LIGHT palette, taken from the Figma design.
+         The dark palette uses the same names in values-night/colors.xml.
+         Contrast checked (WCAG AA): every text colour is at least 4.5:1
+         on its background; the input border (line_strong) is at least 3:1. -->
+    <color name="bg_page">#FFF7FA</color>
+    <color name="bg_card">#FFFFFF</color>
+    <color name="bg_soft">#FBE3EC</color>
+    <color name="line">#EEDCE3</color>
+    <color name="line_strong">#9C8790</color>
+
+    <color name="text_primary">#21171B</color>
+    <color name="text_secondary">#6B5A61</color>
+    <color name="text_on_soft">#7A2848</color>
+
+    <color name="brand">#7A2848</color>
+    <color name="on_brand">#FFFFFF</color>
+    <color name="accent">#A8326A</color>
+    <color name="error">#B3261E</color>
+    <color name="dot_off">#E3CDD6</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

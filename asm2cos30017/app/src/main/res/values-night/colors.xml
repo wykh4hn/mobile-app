@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- DARK palette (Figma "home-page (dark)"). Same names as values/colors.xml.
+         Contrast checked: every text colour is at least 4.5:1 on its background. -->
+    <color name="bg_page">#1C1216</color>
+    <color name="bg_card">#2A1D23</color>
+    <color name="bg_soft">#3B2931</color>
+    <color name="line">#45343B</color>
+    <color name="line_strong">#8F7A83</color>
+
+    <color name="text_primary">#F5EAEF</color>
+    <color name="text_secondary">#CDB9C2</color>
+    <color name="text_on_soft">#F7C6D9</color>
+
+    <color name="brand">#F48FB8</color>
+    <color name="on_brand">#3A0F22</color>
+    <color name="accent">#FF8AB8</color>
+    <color name="error">#FFB4AB</color>
+    <color name="dot_off">#4B3840</color>
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- One theme for both modes. It only points at colour NAMES; the values come
+         from values/colors.xml (light) or values-night/colors.xml (dark). -->
+    <style name="Base.Theme.Assigment_2" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/brand</item>
+        <item name="colorOnPrimary">@color/on_brand</item>
+        <item name="colorPrimaryContainer">@color/bg_soft</item>
+        <item name="colorOnPrimaryContainer">@color/text_on_soft</item>
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorOnSecondary">@color/on_brand</item>
+        <item name="colorSecondaryContainer">@color/bg_soft</item>
+        <item name="colorOnSecondaryContainer">@color/text_on_soft</item>
+        <item name="colorTertiary">@color/accent</item>
+
+        <item name="android:colorBackground">@color/bg_page</item>
+        <item name="android:windowBackground">@color/bg_page</item>
+        <item name="colorOnBackground">@color/text_primary</item>
+        <item name="colorSurface">@color/bg_card</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        <item name="colorSurfaceContainerLow">@color/bg_card</item>
+        <item name="colorSurfaceContainer">@color/bg_card</item>
+        <item name="colorSurfaceContainerHigh">@color/bg_card</item>
+        <item name="colorSurfaceContainerHighest">@color/bg_soft</item>
+        <item name="colorOutline">@color/line_strong</item>
+        <item name="colorOutlineVariant">@color/line</item>
+        <item name="colorError">@color/error</item>
+
+        <!-- Default styles for widgets (Week 5 "Themes & Styles"): every button,
+             text field and card in the app picks these up automatically. -->
+        <item name="materialButtonStyle">@style/Widget.KhanhIsDriving.Button</item>
+        <item name="textInputStyle">@style/Widget.KhanhIsDriving.TextInput</item>
+        <item name="materialCardViewStyle">@style/Widget.KhanhIsDriving.Card</item>
+    </style>
+
+    <style name="Theme.Asm2cos30017" parent="Base.Theme.Asm2cos30017" />
+</resources>

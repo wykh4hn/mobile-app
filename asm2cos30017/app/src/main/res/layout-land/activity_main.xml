@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollMain"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="24dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="24dp">
+
+            <!-- ===== Header: title, search, sort, credit balance, dark-mode switch ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/KhanhIsDriving.Text.Brand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/brand" />
+
+                    <TextView
+                        style="@style/KhanhIsDriving.Text.ScreenTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_title" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/searchView"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/bg_input"
+                    app:iconifiedByDefault="false"
+                    app:queryBackground="@android:color/transparent"
+                    app:queryHint="@string/search_hint" />
+
+                <Spinner
+                    android:id="@+id/spSort"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_spinner"
+                    android:contentDescription="@string/cd_sort"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="36dp"
+                    android:popupBackground="@drawable/bg_summary"
+                    android:spinnerMode="dropdown" />
+
+                <TextView
+                    android:id="@+id/txtBalance"
+                    style="@style/KhanhIsDriving.CreditChip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    tools:text="500 credits" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/swDarkMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:contentDescription="@string/cd_dark_mode" />
+            </LinearLayout>
+
+            <!-- ===== Two columns ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <!-- Left column: one car at a time -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_weight="1.2"
+                    android:orientation="vertical">
+
+                    <!-- Photo on the left, details on the right -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardCar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!-- match_parent: the photo is exactly as tall as the details beside it -->
+                            <FrameLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <!-- Swipe left/right on the photo = Next/Prev, long press = favourite -->
+                                <ImageView
+                                    android:id="@+id/imgCar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    tools:src="@drawable/car_tesla"
+                                    tools:ignore="ContentDescription" />
+
+                                <ImageButton
+                                    android:id="@+id/btnFavourite"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:layout_gravity="top|end"
+                                    android:layout_margin="8dp"
+                                    android:background="@drawable/bg_circle"
+                                    android:padding="12dp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/ic_favorite_border"
+                                    tools:ignore="ContentDescription" />
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1.1"
+                                android:orientation="vertical"
+                                android:padding="14dp">
+
+                                <TextView
+                                    android:id="@+id/txtCategory"
+                                    style="@style/KhanhIsDriving.Text.Overline"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    tools:text="Electric · 5 seats" />
+
+                                <TextView
+                                    android:id="@+id/txtCarName"
+                                    style="@style/KhanhIsDriving.Text.CarTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    tools:text="Tesla Model 3" />
+
+                                <!-- Rating: a RatingBar (non-TextView widget) + the number -->
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <RatingBar
+                                        android:id="@+id/ratingBar"
+                                        style="@style/Widget.AppCompat.RatingBar.Small"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:isIndicator="true"
+                                        android:numStars="5"
+                                        android:progressBackgroundTint="@color/dot_off"
+                                        android:progressTint="@color/accent"
+                                        android:stepSize="0.1"
+                                        tools:rating="4.8" />
+
+                                    <TextView
+                                        android:id="@+id/txtRating"
+                                        style="@style/KhanhIsDriving.Text.Caption"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="6dp"
+                                        android:importantForAccessibility="no"
+                                        tools:text="4.8" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/txtYear"
+                                        style="@style/KhanhIsDriving.Text.Caption"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        tools:text="2023" />
+
+                                    <TextView
+                                        android:id="@+id/txtKm"
+                                        style="@style/KhanhIsDriving.Text.Caption"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="24dp"
+                                        tools:text="9,800 km" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/txtCost"
+                                        style="@style/KhanhIsDriving.Text.Price"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        tools:text="70" />
+
+                                    <TextView
+                                        style="@style/KhanhIsDriving.Text.Caption"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_weight="1"
+                                        android:text="@string/credits_per_day" />
+
+                                    <com.google.android.material.button.MaterialButton
+                                        android:id="@+id/btnRent"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:minWidth="96dp"
+                                        android:text="@string/rent" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Shown instead of the card when the search finds nothing or all cars are rented -->
+                    <TextView
+                        android:id="@+id/txtEmptyCars"
+                        style="@style/KhanhIsDriving.EmptyBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        tools:text="No cars match “bmw”." />
+
+                    <!-- ===== Prev / dots / Next ===== -->
+                    <LinearLayout
+                        android:id="@+id/layoutPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnPrev"
+                            style="@style/Widget.KhanhIsDriving.Button.Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/previous" />
+
+                        <!-- Dots are drawn in code: one per car in the current list -->
+                        <LinearLayout
+                            android:id="@+id/layoutDots"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:importantForAccessibility="noHideDescendants"
+                            android:orientation="horizontal" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnNext"
+                            style="@style/Widget.KhanhIsDriving.Button.Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/next" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtCounter"
+                        style="@style/KhanhIsDriving.Text.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        tools:text="swipe to see more · 3/5" />
+                </LinearLayout>
+
+                <!-- Right column: favourites and bookings -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!-- ===== Favourites ===== -->
+                    <TextView
+                        style="@style/KhanhIsDriving.Text.HomeSection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="@string/favourites" />
+
+                    <TextView
+                        android:id="@+id/txtFavouritesEmpty"
+                        style="@style/KhanhIsDriving.Text.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/favourites_empty" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvFavourites"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:clipToPadding="false"
+                        android:nestedScrollingEnabled="false"
+                        android:visibility="gone" />
+
+                    <!-- ===== My booking ===== -->
+                    <TextView
+                        style="@style/KhanhIsDriving.Text.HomeSection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_booking" />
+
+                    <TextView
+                        android:id="@+id/txtBookingsEmpty"
+                        style="@style/KhanhIsDriving.Text.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/bookings_empty" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvBookings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:nestedScrollingEnabled="false"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

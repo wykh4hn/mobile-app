@@ -49,6 +49,8 @@ import kotlin.math.abs
  * Same pattern as the lectures and Assignment 1: views are found with findViewById,
  * every click goes through one onClick with when(v?.id), and every change ends with
  * updateUI(), which redraws the screen from the data in [CarViewModel].
+ *
+ * Instead of being broken down bc of the faded run button, i can just ctrl f9
  */
 class MainActivity : AppCompatActivity(), View.OnClickListener, View.OnTouchListener,
     SearchView.OnQueryTextListener, AdapterView.OnItemSelectedListener {
@@ -120,10 +122,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, View.OnTouchList
         setContentView(R.layout.activity_main)
         // Keep content clear of the status bar, navigation bar and keyboard
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.ime())
+            // displayCutout() = the camera hole, which sits at the side in landscape
+            val types = WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.displayCutout() or WindowInsetsCompat.Type.ime()
+            val bars = insets.getInsets(types)
             v.setPadding(bars.left, bars.top, bars.right, bars.bottom)
             insets
         }
+
         Log.d(TAG, "MainActivity onCreate (recreated=${savedInstanceState != null})")
 
         // Week 4: the ViewModel keeps the data when the Activity is recreated
